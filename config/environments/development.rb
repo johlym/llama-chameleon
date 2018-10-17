@@ -40,7 +40,12 @@ Rails.application.configure do
   # config.action_view.raise_on_missing_translations = true
 
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = { :address => "localhost", :port => 1025 }
+  config.action_mailer.smtp_settings = { 
+    :address => "smtp.sendgrid.net", 
+    :port => 587,
+    :user_name => 'apikey',
+    :password => ENV['SENDGRID_API_KEY'] 
+  }
   config.action_mailer.default_url_options = { :host => 'http://localhost:3000' }
   config.action_mailer.asset_host = 'http://localhost:3000'
 end
