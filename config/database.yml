@@ -19,7 +19,11 @@ default: &default
   encoding: unicode
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
-  pool: 5
+
+  # JL: Expanding connection pool to prevent the rails app from having to wait
+  # for a free connection. Assumes one dyno and a single pool of 20 potential
+  # connections to the pgSQL database.
+  pool: 20
 
 development:
   <<: *default
