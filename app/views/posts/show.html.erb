@@ -15,7 +15,7 @@
 <p>
   <strong>Author:</strong>
   <%= @post.author %>
-  <img src="/assets/mystery-man.jpg" />
+  <%= image_tag('mystery-man.jpg') %>
 </p>
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
