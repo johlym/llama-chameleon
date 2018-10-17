@@ -49,7 +49,8 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { :host => 'http://localhost:3000' }
   config.action_mailer.asset_host = 'http://localhost:3000'
 
-  # Turn this on if you want to test delayed jobs in development. Kicking off
-  # said jobs will require running `bundle exec rake jobs:work` manually.
+  # Turn this on if you want to test delayed jobs in development. If this is 
+  # turned off (commented out), emails will not trigger async and will hold up
+  # the request process. This shouldn't be an issue for development.
   # config.active_job.queue_adapter = :delayed_job
 end
