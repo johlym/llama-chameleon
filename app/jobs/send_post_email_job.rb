@@ -3,6 +3,6 @@ class SendPostEmailJob < ActiveJob::Base
 
   def perform(post, email)
     # Send email containing the post
-    PostMailer.create(post, email).deliver_later!
+    PostMailer.create(post, email).deliver_now
   end
 end
