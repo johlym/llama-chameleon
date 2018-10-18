@@ -23,7 +23,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'ffaker'
 
-# fFr allowing emails to be queued and sent async.
+# For allowing emails to be queued and sent async.
 # Ties ActiveRecord into DelayedJob.
 gem 'delayed_job_active_record'
 
